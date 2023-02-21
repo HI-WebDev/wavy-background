@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Julee&family=Sassy+Frass&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Julee', cursive;
+}
+
+.weavy {
+    height: 100vh
+}
+
+.weavy::before {
+    content: "";
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    background-color: #0075ff;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%) skew(0deg, -10deg);
+    z-index: -1;
+    -webkit-animation: wave 5s ease-in-out infinite alternate;
+    -webkit-animation: wave 5s ease-in infinite alternate;
+    animation: wave 5s ease-in infinite alternate;
+}
+
+.weavy .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 11px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px #ddd;
+}
+
+
+.weavy .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 11px;
+    text-align: center;
+
+}
+
+.weavy .card img {
+    border-radius: 11px;
+}
+
+.weavy .card .title {
+    margin: 12px;
+}
+
+.weavy .card .content {
+    margin: 2px;
+}
+
+@-webkit-keyframes wave {
+    from {
+        transform: translateX(-50%) skew(0deg, -10deg);
+    }
+
+    to {
+        transform: translateX(-40%) skew(10deg, 0deg);
+    }
+}
